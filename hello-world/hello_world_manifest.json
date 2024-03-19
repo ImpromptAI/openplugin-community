@@ -9,7 +9,7 @@
     "description": "This is a dummy plugin",
     "contact_email": "shrikant@imprompt.ai",
     "legal_info_url": null,
-    "openapi_doc_url": "https://www.klarna.com/us/shopping/public/openai/v0/api-docs/",
+    "openapi_doc_url": "https://raw.githubusercontent.com/ImpromptAI/openplugin-community/main/hello-world/hello_world_openapi.json",
     "permutate_doc_url": null,
     "input_modules": [
         {
