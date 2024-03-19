@@ -1,0 +1,81 @@
+{
+    "name": "Hello World",
+    "schema_version": "0.0.1",
+    "openplugin_manifest_version": "0.1.0",
+    "auth": {
+        "type": "none"
+    },
+    "logo_url": null,
+    "description": "This is a dummy plugin",
+    "contact_email": "shrikant@imprompt.ai",
+    "legal_info_url": null,
+    "openapi_doc_url": "https://www.klarna.com/us/shopping/public/openai/v0/api-docs/",
+    "permutate_doc_url": null,
+    "input_modules": [
+        {
+            "description": "This will handle file coming to the plugin",
+            "finish_output_port": "text",
+            "id": "1",
+            "initial_input_port": "filepath",
+            "name": "convert_file_to_text",
+            "processors": [
+                {
+                    "input_port": "filepath",
+                    "metadata": {},
+                    "output_port": "text",
+                    "processor_implementation_type": "file_to_text_with_langchain",
+                    "processor_type": "file_to_text"
+                }
+            ]
+        }
+    ],
+    "plugin_operations": {
+        "/dummy-api": {
+            "get": {
+                "human_usage_examples": [
+                    "Get me 10 dummy names",
+                    "Get me 5 dummy countries"
+                ],
+                "output_modules": [
+                    {
+                        "description": "This will write a summary of the response",
+                        "finish_output_port": "text",
+                        "initial_input_port": "json",
+                        "name": "summary_response",
+                        "processors": [
+                            {
+                                "input_port": "json",
+                                "metadata": {
+                                    "pre_prompt": "Write summary of the response"
+                                },
+                                "output_port": "text",
+                                "processor_implementation_type": "llm_engine_with_openai",
+                                "processor_type": "llm_engine"
+                            }
+                        ]
+                    }
+                ],
+                "plugin_signature_helpers": [
+                    "if you can't find the user's clothes size, ask the user about the size.",
+                    "If any error occurs, write an apologetic message to the user"
+                ]
+            }
+        }
+    },
+    "preferred_approaches": [
+        {
+            "base_strategy": "oai functions",
+            "llm": {
+                "frequency_penalty": 0,
+                "max_tokens": 2048,
+                "model_name": "gpt-3.5-turbo-0613",
+                "presence_penalty": 0,
+                "provider": "OpenAI",
+                "temperature": 0,
+                "top_p": 1
+            },
+            "name": "OAI functions-OpenAI",
+            "pre_prompt": null
+        }
+    ]
+}

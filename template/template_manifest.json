@@ -1,0 +1,121 @@
+{
+    "schema_version": "<ADD>",
+    "openplugin_manifest_version": "<ADD>",
+    "name": "<ADD>",
+    "contact_email": "<ADD>",
+    "description": "<ADD>",
+    "openapi_doc_url": "<ADD>",
+    "legal_info_url": "<ADD>",
+    "logo_url": "<ADD>",
+    "permutate_doc_url": "<ADD>",
+    "permutation_test_urls": "<ADD>",
+    "auth": {
+        "type": "<ADD>"
+    },
+    "input_modules": [
+        {
+            "id": "<ADD>",
+            "name": "<ADD>",
+            "description": "<ADD>",
+            "initial_input_port": "<ADD>",
+            "finish_output_port": "<ADD>",
+            "processors": [
+                {
+                    "input_port": "<ADD>",
+                    "output_port": "<ADD>",
+                    "processor_type": "<ADD>",
+                    "processor_implementation_type": "<ADD>",
+                    "metadata": {
+                        "<ADD>": "<ADD>"
+                    }
+                }
+            ]
+        }
+    ],
+    "plugin_operations": {
+        "<ADD>": {
+            "<ADD>": {
+                "human_usage_examples": [
+                   "<ADD>"
+                ],
+                "plugin_signature_helpers": [
+                  "<ADD>"
+                ],
+                "output_modules": [
+                    {
+                        "name": "<ADD>",
+                        "description": "<ADD>",
+                        "initial_input_port": "<ADD>",
+                        "finish_output_port": "<ADD>",
+                        "processors": [
+                            {
+                                "input_port": "<ADD>",
+                                "output_port": "<ADD>",
+                                "processor_type": "<ADD>",
+                                "processor_implementation_type": "<ADD>",
+                                "metadata": {
+                                    "pre_prompt": "<ADD>"
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "name": "<ADD>",
+                        "description": "<ADD>",
+                        "initial_input_port": "<ADD>",
+                        "finish_output_port": "<ADD>",
+                        "processors": [
+                            {
+                                "input_port": "<ADD>",
+                                "output_port": "<ADD>",
+                                "processor_type": "<ADD>",
+                                "processor_implementation_type": "<ADD>",
+                                "metadata": {
+                                    "pre_prompt": "<ADD>",
+                                    "mime_type": "<ADD>",
+                                    "template": "<ADD>",
+                                    "template_prompt": "<ADD>"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    },
+    "output_modules": [
+        {
+            "name": "<ADD>",
+            "description": "<ADD>",
+            "initial_input_port": "<ADD>",
+            "finish_output_port": "<ADD>",
+            "processors": [
+                {
+                    "input_port": "<ADD>",
+                    "output_port": "<ADD>",
+                    "processor_type": "<ADD>",
+                    "processor_implementation_type": "<ADD>",
+                    "metadata": {
+                        "template": "<ADD>"
+                    }
+                }
+            ]
+        }
+    ],
+    "preferred_approaches": [
+        {
+            "base_strategy": "<ADD>",
+            "llm": {
+                "frequency_penalty": 0,
+                "max_tokens": 2048,
+                "model_name": "<ADD>",
+                "presence_penalty": 0,
+                "provider": "OpenAI",
+                "temperature": 0,
+                "top_p": 1
+            },
+            "name": "<ADD>",
+            "pre_prompt": null
+        }
+    ]
+}

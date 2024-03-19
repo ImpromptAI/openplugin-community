@@ -1,0 +1,129 @@
+{
+    "openapi": "<ADD>",
+    "info": {
+        "version": "<ADD>",
+        "title": "<ADD>"
+    },
+    "servers": [
+        {
+            "url": "<ADD>"
+        }
+    ],
+    "tags": [
+        {
+            "name": "<ADD>",
+            "description": "<ADD>"
+        }
+    ],
+    "paths": {
+        "<ADD>": {
+            "<ADD>": {
+                "tags": [
+                    "<ADD>"
+                ],
+                "summary": "<ADD>",
+                "operationId": "<ADD>",
+                "parameters": [
+                    {
+                        "name": "<ADD>",
+                        "in": "<ADD>",
+                        "description": "<ADD>",
+                        "required": true,
+                        "schema": {
+                            "type": "<ADD>"
+                        }
+                    },
+                    {
+                        "name": "<ADD>",
+                        "in": "<ADD>",
+                        "description": "<ADD>",
+                        "required": true,
+                        "schema": {
+                            "type": "<ADD>"
+                        }
+                    },
+                    {
+                        "name": "<ADD>",
+                        "in": "<ADD>",
+                        "description": "<ADD>",
+                        "required": false,
+                        "schema": {
+                            "type": "<ADD>"
+                        }
+                    },
+                    {
+                        "name": "<ADD>",
+                        "in": "<ADD>",
+                        "description": "<ADD>",
+                        "required": false,
+                        "schema": {
+                            "type": "<ADD>"
+                        }
+                    },
+                    {
+                        "name": "<ADD>",
+                        "in": "<ADD>",
+                        "description": "<ADD>",
+                        "required": false,
+                        "schema": {
+                            "type": "<ADD>"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "<ADD>",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "<ADD>"
+                                }
+                            }
+                        }
+                    },
+                    "503": {
+                        "description": "<ADD>"
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "<ADD>": {
+                "type": "<ADD>",
+                "properties": {
+                    "attributes": {
+                        "type": "<ADD>",
+                        "items": {
+                            "type": "<ADD>"
+                        }
+                    },
+                    "<ADD>1": {
+                        "type": "string"
+                    },
+                    "<ADD>2": {
+                        "type": "string"
+                    },
+                    "<ADD>3": {
+                        "type": "string"
+                    }
+                },
+                "<ADD>": "<ADD>"
+            },
+            "<ADD>2": {
+                "type": "object",
+                "properties": {
+                    "products": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "<ADD>"
+                        }
+                    }
+                },
+                "title": "<ADD>"
+            }
+        }
+    }
+}

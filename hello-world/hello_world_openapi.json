@@ -1,0 +1,62 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Dummy API",
+    "description": "API to get dummy data"
+  },
+  "servers": [
+    {
+      "url": "https://mvn9u5rzsj.execute-api.us-east-1.amazonaws.com/default"
+    }
+  ],
+  "paths": {
+    "/dummy-api": {
+      "get": {
+        "summary": "Get dummy data",
+        "description": "This endpoint returns an array of dummy data based on the specified category and count.",
+        "parameters": [
+          {
+            "in": "query",
+            "name": "category",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "The category of the dummy data."
+          },
+          {
+            "in": "query",
+            "name": "count",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            },
+            "description": "The number of dummy data to return."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful operation",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Invalid parameters"
+          },
+          "404": {
+            "description": "Not found"
+          }
+        }
+      }
+    }
+  }
+}
